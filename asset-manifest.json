@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/zhr/static/css/main.bcaa4d2c.css",
+    "main.js": "/zhr/static/js/main.514b4b4a.js",
+    "static/media/b3.png": "/zhr/static/media/b3.db1a6d419e947d7b124d.png",
+    "static/media/nails3.jpg": "/zhr/static/media/nails3.abab405b3ae3bc03520f.jpg",
+    "static/media/landing-long.png": "/zhr/static/media/landing-long.f737386ec6abc51ab1fc.png",
+    "static/media/real2.jpg": "/zhr/static/media/real2.d08ef73e9557a1ec3aca.jpg",
+    "static/media/real5.jpg": "/zhr/static/media/real5.37e3aa79554918721387.jpg",
+    "static/media/real3.jpg": "/zhr/static/media/real3.8de165885982e2a1b283.jpg",
+    "static/media/real6.jpg": "/zhr/static/media/real6.79d4575cab86f5f1f654.jpg",
+    "static/media/real4.jpg": "/zhr/static/media/real4.468e553c49f79fe543ef.jpg",
+    "static/media/real1.jpg": "/zhr/static/media/real1.068604b9d0d4d646c8d1.jpg",
+    "static/media/nails5.jpg": "/zhr/static/media/nails5.af01fe0bf01048892840.jpg",
+    "static/media/nails4.jpg": "/zhr/static/media/nails4.0c22f5b38c2d0960a787.jpg",
+    "static/media/nails6.jpg": "/zhr/static/media/nails6.189ea78a2d07c7629a2f.jpg",
+    "static/media/nails7.jpg": "/zhr/static/media/nails7.8f5e09cbdc8ac11c0c27.jpg",
+    "static/media/b2.png": "/zhr/static/media/b2.7aa667c73967beedf7ba.png",
+    "static/media/zhr-logo.jpeg": "/zhr/static/media/zhr-logo.b000defd740bc238dd4f.jpeg",
+    "static/media/n1.jpeg": "/zhr/static/media/n1.68ceb7c320c9d58aeaf4.jpeg",
+    "index.html": "/zhr/index.html",
+    "main.bcaa4d2c.css.map": "/zhr/static/css/main.bcaa4d2c.css.map",
+    "main.514b4b4a.js.map": "/zhr/static/js/main.514b4b4a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bcaa4d2c.css",
+    "static/js/main.514b4b4a.js"
+  ]
+}
