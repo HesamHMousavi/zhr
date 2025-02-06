@@ -1,0 +1,26 @@
+:root{
+  --header-color:#ffeedd;
+  --header-color-hover:#fdead8;
+  --primary-pink: #d87489;
+  --text-color: #d77e5e;
+  --text-color-header: #8d5f4e;
+  --cream-light: #f4d4b7;
+  --cream-light-hover: #fadec5;
+  --dusty-pink:#f8e4e1; 
+  --medium-cream: #fff6ea;
+  --text-color-2: #6D4C41;
+  --bg: #a67b7b;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+
+.max-width{
+  max-width: 1600px;
+  margin: auto;
+}

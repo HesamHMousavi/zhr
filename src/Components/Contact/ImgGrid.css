@@ -1,0 +1,76 @@
+.grid-container {
+    position: relative;
+    width: 100%;
+    /* padding: 10px; */
+}
+
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.img-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Overlay styles */
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.grid-overlay h3 {
+    font-weight: 300;
+    font-size: clamp(30px, 5vw, 60px);
+    color: var(--header-color);
+}
+
+.grid-overlay p {
+    font-weight: 300;
+    font-size: clamp(16px, 3vw, 25px);
+    margin-top: 1rem;
+    color: var(--header-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .img-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .img-grid img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .img-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .img-grid img {
+        height: 200px;
+    }
+
+    .grid-overlay h3 {
+        font-size: clamp(24px, 4vw, 40px);
+    }
+
+    .grid-overlay p {
+        font-size: clamp(14px, 2.5vw, 20px);
+    }
+}

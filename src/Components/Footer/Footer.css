@@ -1,0 +1,120 @@
+.footer {
+    background-color: var(--cream-light-hover);
+    color: #222;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+  }
+  .footer-section h3 {
+    margin: 1rem 0;
+    font-size: 30px;
+    font-weight: 300;
+  }
+  
+  .footer-section h2, 
+  .footer-section h3 {
+    text-align: center;
+    color:  var(--text-color-header);
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none;
+    color:  var(--text-color-header);
+    transition: color 0.1s ease-in-out;
+    font-size: 20px;
+    font-weight: 300;
+  }
+  
+  .footer-section ul li a:hover {
+    color:  var(--text-color-header);
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .icon-soc{
+    height: 50px !important;
+    width: 50px  !important;
+    color:  var(--text-color-header);
+  }
+  
+  .social-icons a {
+    color:  var(--text-color-header);
+    font-size: 20px;
+    transition: color 0.1s ease-in-out;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.1);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    color:  var(--text-color-header);
+  }
+  .logo-footer{
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+  }
+  .lit-webs {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-color-2);
+}
+
+
+  @media (max-width: 800px) {
+    .footer-section{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-section h3 {
+      margin: 2rem 0;
+      font-size: 24px;
+    }
+    .footer-section ul li a {
+      font-size: 18px;
+    }
+
+    .icon-soc{
+      height: 35px !important;
+      width: 35px  !important;
+      color:  var(--text-color-header);
+    }
+  }
+
+  

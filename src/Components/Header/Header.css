@@ -1,0 +1,60 @@
+.bg-pink{
+    background-color: var(--header-color);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100% ;
+    position: sticky;
+}
+
+.header {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  1rem ;
+    
+}
+.header img{
+    object-fit: cover;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+}
+.header .links ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.header .links ul li{
+    cursor: pointer;
+    padding: 15px 1.5rem;
+    transition: all 0.2s;
+    border-radius: 5px;
+}
+.header .links ul li:hover{
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+    background-color: var(--header-color-hover);
+}
+.header .links ul li a{
+    font-size: 24px;
+    font-weight: 300;
+    text-decoration: none;
+    color: var(--text-color-header);
+}
+@media (max-width: 800px) {
+    .header {
+        height: 100px;
+    }   
+    .header .links ul li a{
+        font-size: 18px;
+    }
+    .header .links ul li{
+        padding: 10px 12px;
+    }
+    .header .links ul{
+        gap: 5px;
+    }
+}
