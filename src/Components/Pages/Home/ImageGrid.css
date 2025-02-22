@@ -1,0 +1,139 @@
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusts column layout based on screen size */
+    gap: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+/* Individual Image Cards */
+.image-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* When the component is in view */
+.image-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    min-height: 500px; /* Adjusted for better responsiveness */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Hover Effect */
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+/* Dark Overlay */
+.image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Darker overlay on hover */
+.image-container:hover::after {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Overlay Text */
+.overlay-text {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    color: white;
+    font-size: 3vw; /* Responsive text */
+    text-align: center;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Make text fade in with animation */
+.image-card.visible .overlay-text {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* Button Styles */
+.orange-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.orange-btn:hover {
+    background-color: darkorange;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .image-container {
+        min-height: 400px;
+    }
+    .overlay-text {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        padding: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .image-container {
+        min-height: 350px;
+    }
+    .overlay-text {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+    .image-container {
+        min-height: 300px;
+    }
+    .overlay-text {
+        font-size: 6vw;
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,125 @@
+.nail-section {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.nail-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    max-width: 1400px; /* Limits max width on large screens */
+}
+
+/* Image Styling */
+.nail-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nail-image img {
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
+}
+
+/* Text Styling */
+.nail-text {
+    flex: 1;
+    text-align: left;
+}
+
+.nail-text h2 {
+    font-size: clamp(32px, 5vw, 60px); /* Responsive font size */
+    color: #999;
+    font-weight: 200;
+    border-bottom: 2px solid var(--footer-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.nail-text p {
+    font-size: clamp(16px, 2vw, 22px); /* Responsive text */
+    color: #4d4036;
+}
+
+/* Animations */
+.nail-image, .nail-text {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Image slides in from the left */
+.nail-image.animate-in-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.nail-image.animate-out-left {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+/* Text slides in from the right */
+.nail-text.animate-in-right {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.nail-text.animate-out-right {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+/* Delay text animation */
+.delay {
+    transition-delay: 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nail-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nail-container {
+        flex-direction: column; /* Stack image and text */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .nail-text {
+        text-align: center;
+    }
+
+    .nail-image img {
+        max-width: 80%; /* Prevents images from being too large */
+    }
+}
+
+@media (max-width: 480px) {
+    .nail-section {
+        padding: 3rem 1rem;
+    }
+
+    .nail-text h2 {
+        font-size: 28px;
+    }
+
+    .nail-text p {
+        font-size: 16px;
+    }
+
+    .nail-image img {
+        max-width: 100%;
+    }
+}

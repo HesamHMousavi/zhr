@@ -1,0 +1,131 @@
+.services-section {
+    background-color: #f8f6f4;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+/* Text Styling */
+.services-text {
+    flex: 1;
+    text-align: left;
+}
+
+.services-text h2 {
+    font-size: clamp(32px, 5vw, 60px); /* Responsive text */
+    color: #999;
+    font-weight: 200;
+    border-bottom: 2px solid var(--footer-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.services-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services-text li {
+    text-align: left;
+    font-size: clamp(20px, 3vw, 30px); /* Responsive font size */
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* Image Styling */
+.services-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-image img {
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
+}
+
+/* Animations */
+.services-text, .services-image {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Text slides in from the left */
+.services-text.animate-in-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.services-text.animate-out-left {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+/* Image slides in from the right */
+.services-image.animate-in-right {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.services-image.animate-out-right {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column-reverse; /* Stack text and image */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .services-text {
+        text-align: center;
+    }
+
+    .services-text li {
+        text-align: center;
+    }
+
+    .services-image img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-section {
+        padding: 3rem 1rem;
+    }
+
+    .services-text h2 {
+        font-size: 28px;
+    }
+
+    .services-text li {
+        font-size: 18px;
+    }
+
+    .services-image img {
+        max-width: 100%;
+    }
+}

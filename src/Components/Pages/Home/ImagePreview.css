@@ -1,0 +1,56 @@
+.image-preview {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* When the component enters the viewport */
+.image-preview.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dark Overlay */
+.image-preview::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Centering Overlay Text */
+.image-preview .overlay-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%); /* Centers the text */
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Make the text visible when the component enters the viewport */
+.image-preview.visible .overlay-text {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+}

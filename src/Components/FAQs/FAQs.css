@@ -1,0 +1,114 @@
+.faq-section {
+    background-color: #f8f6f4;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Title */
+.faq-title {
+    font-size: clamp(28px, 4vw, 40px); /* Responsive title */
+    font-weight: bold;
+    color: #4d4036;
+    border-bottom: 3px solid #b45309;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 2rem;
+}
+
+/* Grid Layout */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* FAQ Card */
+.faq-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    border: 20px solid transparent; 
+    height: auto;
+    min-height: 250px; /* Ensures consistency */
+    font-size: clamp(16px, 1.2rem, 18px); /* Responsive font size */
+    opacity: 0;
+    border-image: url("../../Images/rug2.jpeg") 100 round; /* Adjust slice values if needed */
+    padding: 15px;
+}
+
+/* Card Title */
+.faq-card h3 {
+    font-size: clamp(20px, 2vw, 25px);
+    color: #4d4036;
+    margin-bottom: 10px;
+}
+
+/* Card Text */
+.faq-card p {
+    font-size: clamp(14px, 1.5vw, 18px);
+    color: #4d4036;
+}
+
+/* Animations */
+.faq-title, .faq-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.faq-title.animate-in, .faq-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.faq-title.animate-out, .faq-card.animate-out {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Staggered effect */
+.delay-0 {
+    transition-delay: 0.2s;
+}
+.delay-1 {
+    transition-delay: 0.4s;
+}
+.delay-2 {
+    transition-delay: 0.6s;
+}
+.delay-3 {
+    transition-delay: 0.8s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-section {
+        padding: 2rem 1rem;
+    }
+
+    .faq-card {
+        padding: 1rem;
+        min-height: auto; /* Auto height for better spacing */
+    }
+}
