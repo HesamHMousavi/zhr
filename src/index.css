@@ -8,6 +8,18 @@
   --lighter-orange:#eda97c;
 }
 
+select {
+  -webkit-transform: translateZ(0); 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0; 
+  color: #333 !important;
+}
+option{
+  color: #333 !important;
+}
+
 
 *{
   margin: 0;

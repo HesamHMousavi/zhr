@@ -1,11 +1,15 @@
+
 .nail-section {
     padding: 4rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10rem;
+    margin-top: 5rem;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
+/* Container Styling */
 .nail-container {
     display: flex;
     align-items: center;
@@ -13,6 +17,9 @@
     gap: 50px;
     width: 100%;
     max-width: 1400px; /* Limits max width on large screens */
+    flex-wrap: wrap; /* Prevents flexbox overflow */
+    padding: 0 1rem; /* Avoids touching screen edges */
+    box-sizing: border-box;
 }
 
 /* Image Styling */
@@ -21,22 +28,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 300px;
 }
 
 .nail-image img {
     width: 100%;
     max-width: 500px;
     object-fit: cover;
+    display: block;
 }
 
 /* Text Styling */
 .nail-text {
     flex: 1;
     text-align: left;
+    min-width: 300px; /* Ensures text doesn’t shrink too much */
 }
 
 .nail-text h2 {
-    font-size: clamp(32px, 5vw, 60px); /* Responsive font size */
+    font-size: clamp(32px, 5vw, 60px);
     color: #999;
     font-weight: 200;
     border-bottom: 2px solid var(--footer-color);
@@ -46,7 +56,7 @@
 }
 
 .nail-text p {
-    font-size: clamp(16px, 2vw, 22px); /* Responsive text */
+    font-size: clamp(16px, 2vw, 22px);
     color: #4d4036;
 }
 
@@ -109,6 +119,10 @@
 @media (max-width: 480px) {
     .nail-section {
         padding: 3rem 1rem;
+    }
+
+    .nail-container {
+        padding: 0; /* Ensures no extra spacing */
     }
 
     .nail-text h2 {

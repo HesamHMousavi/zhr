@@ -1,11 +1,16 @@
+
+
 .services-section {
     background-color: #f8f6f4;
     padding: 4rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
+/* Container Styling */
 .services-container {
     width: 100%;
     max-width: 1400px;
@@ -13,16 +18,20 @@
     align-items: center;
     gap: 50px;
     justify-content: space-between;
+    flex-wrap: wrap; /* Prevents overflow */
+    padding: 0 1rem; /* Avoids touching screen edges */
+    box-sizing: border-box;
 }
 
 /* Text Styling */
 .services-text {
     flex: 1;
     text-align: left;
+    min-width: 300px; /* Ensures text doesn't shrink too much */
 }
 
 .services-text h2 {
-    font-size: clamp(32px, 5vw, 60px); /* Responsive text */
+    font-size: clamp(32px, 5vw, 60px);
     color: #999;
     font-weight: 200;
     border-bottom: 2px solid var(--footer-color);
@@ -38,7 +47,7 @@
 
 .services-text li {
     text-align: left;
-    font-size: clamp(20px, 3vw, 30px); /* Responsive font size */
+    font-size: clamp(20px, 3vw, 30px);
     color: #888;
     margin-bottom: 10px;
 }
@@ -49,12 +58,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 300px;
 }
 
 .services-image img {
     width: 100%;
     max-width: 500px;
     object-fit: cover;
+    display: block;
 }
 
 /* Animations */
@@ -94,7 +105,7 @@
 
 @media (max-width: 768px) {
     .services-container {
-        flex-direction: column-reverse; /* Stack text and image */
+        flex-direction: column-reverse;
         text-align: center;
         gap: 20px;
     }
@@ -115,6 +126,10 @@
 @media (max-width: 480px) {
     .services-section {
         padding: 3rem 1rem;
+    }
+
+    .services-container {
+        padding: 0; /* Ensures no extra spacing */
     }
 
     .services-text h2 {

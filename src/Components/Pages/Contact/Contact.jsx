@@ -7,7 +7,6 @@ import ContactForm from "./ContactForm";
 import FAQSection from "../../FAQs/FAQs";
 import Footer from "../../Footer/Footer";
 
-
 const Contact = () => {
   return (
     <div>
