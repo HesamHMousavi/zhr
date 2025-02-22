@@ -4,6 +4,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { BsLightbulb } from "react-icons/bs";
 import { GiNailedFoot } from "react-icons/gi";
 import { FaBookOpen } from "react-icons/fa";
+import { GrTools } from "react-icons/gr";
 
 const AboutSection = () => {
   const sectionRef = useRef(null);
@@ -36,7 +37,7 @@ const AboutSection = () => {
           {[
             { icon: <FaUserAlt />, text: "I'm Zahra, a self-taught nail artist." },
             { icon: <BsLightbulb />, text: "Nails are my passion and creative outlet." },
-            { icon: <GiNailedFoot />, text: "I’ve mastered my craft through dedication." },
+            { icon: <GrTools />, text: "I’ve mastered my craft through dedication." },
             { icon: <FaBookOpen />, text: "I love creating designs that tell a story." },
           ].map((item, index) => (
             <div
