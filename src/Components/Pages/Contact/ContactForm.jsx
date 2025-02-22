@@ -25,24 +25,24 @@ const ContactForm = () => {
   }, []);
 
   return (
-    <div ref={formRef} className="contact-section">
+    <div ref={formRef} className="contact-section" id="contact-form">
       <h2
         className={`contact-title ${isVisible ? "animate-in" : "animate-out"}`}
       >
         Contact Form
       </h2>
       <form
-        action="https://formsubmit.co/your-email@example.com"
+        action="https://formsubmit.co/ZHR.nails@hotmail.com"
         method="POST"
         className={`contact-form ${isVisible ? "animate-in" : "animate-out"}`}
       >
         {/* Spam Prevention & Redirect */}
-        <input type="hidden" name="_captcha" value="false" />
+        {/* <input type="hidden" name="_captcha" value="false" />
         <input
           type="hidden"
           name="_next"
           value="https://yourwebsite.com/thank-you"
-        />
+        /> */}
 
         <div className="input-group">
           <input
@@ -66,12 +66,12 @@ const ContactForm = () => {
               Service Type*
             </option>
             <option>Acrylics</option>
-            <option>Gel X</option>
+            <option>Gel-X</option>
             <option>Manicure</option>
           </select>
           <select name="nail_shape" required>
             <option value="" disabled selected>
-              Nail Shape/Length*
+              Nail Length*
             </option>
             <option>Short</option>
             <option>Medium</option>

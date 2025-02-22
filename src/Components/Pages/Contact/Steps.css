@@ -3,7 +3,7 @@
     background-size: cover; /* Ensures full coverage */
     border: 30px solid #fff;
     position: relative;
-    min-height: 100vh; /* Adjusted for better responsiveness */
+    min-height: 20px; /* Adjusted for better responsiveness */
     display: flex;
     justify-content: center;
     align-items: center;

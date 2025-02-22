@@ -43,7 +43,7 @@
     min-height: 250px; /* Ensures consistency */
     font-size: clamp(16px, 1.2rem, 18px); /* Responsive font size */
     opacity: 0;
-    border-image: url("../../Images/rug2.jpeg") 100 round; /* Adjust slice values if needed */
+    /* border-image: url("../../Images/rug2.jpeg") 100 round; Adjust slice values if needed */
     padding: 15px;
 }
 

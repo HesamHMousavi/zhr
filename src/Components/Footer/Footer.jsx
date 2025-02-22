@@ -43,7 +43,7 @@ const Footer = () => {
 
           <div className="footer-item">
             <FaEnvelope className="footer-icon" />
-            <p>ZHREMAIL@EMAIL.Co.Uk</p>
+            <p>ZHR.nails@hotmail.com</p>
           </div>
 
           <div className="footer-item">
@@ -69,7 +69,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>2025 © ZHR_Nails All Rights Reserved</p>
+        <p>2025 © ZHR Nails All Rights Reserved</p>
         <div className="social-icons">
           <FaInstagram
             className="social-icon"

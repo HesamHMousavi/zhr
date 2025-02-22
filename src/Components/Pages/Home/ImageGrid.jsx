@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./ImageGrid.css";
 import { Link, useNavigate } from "react-router-dom";
-import img1 from "../../../Images/IMG1.jpg";
+import img1 from "../../../Images/IMG2.jpg";
 import img2 from "../../../Images/IMG10.jpg";
 import img3 from "../../../Images/IMG12.jpg";
 

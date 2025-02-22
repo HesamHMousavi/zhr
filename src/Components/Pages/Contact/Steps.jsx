@@ -26,35 +26,8 @@ const Steps = () => {
 
   return (
     <div ref={sectionRef} className="steps-section">
-      <div className="overlay"></div> {/* Dark overlay */}
-      <div className="steps-container">
-        <div
-          className={`step step-one ${
-            isVisible ? "animate-in delay-0" : "animate-out"
-          }`}
-        >
-          <h2>Step One</h2>
-          <p>Fill out the form below with your details and nail inspiration</p>
-        </div>
-
-        <div
-          className={`step step-two ${
-            isVisible ? "animate-in delay-1" : "animate-out"
-          }`}
-        >
-          <h2>Step Two</h2>
-          <p>Fill out the form below with your details and nail inspiration</p>
-        </div>
-
-        <div
-          className={`step step-three ${
-            isVisible ? "animate-in delay-2" : "animate-out"
-          }`}
-        >
-          <h2>Step Three</h2>
-          <p>Fill out the form below with your details and nail inspiration</p>
-        </div>
-      </div>
+      <div className="overlay"></div> 
+      <div className="steps-container"></div>
     </div>
   );
 };

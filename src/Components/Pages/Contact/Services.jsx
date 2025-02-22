@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Services.css";
+import { useNavigate } from "react-router-dom";
 import img from "../../../Images/IMG7.jpg"; // Replace with actual image path
 
 const Services = () => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-
+  const nav = useNavigate();
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -36,10 +37,12 @@ const Services = () => {
           <h2>Services Offered</h2>
           <ul>
             <li>Acrylics</li>
-            <li>Gel X</li>
             <li>Gels</li>
             <li>Manicures</li>
-            <li>Press-ons</li>
+            <li>Gel-X</li>
+            <li className="tt" onClick={() => nav("/press-ons")}>
+              Press-ons
+            </li>
           </ul>
         </div>
         <div

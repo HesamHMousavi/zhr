@@ -43,14 +43,21 @@
 .services-text ul {
     list-style: none;
     padding: 0;
+    cursor: pointer;
 }
 
+
+.tt{
+    text-decoration: none !important;
+     color: var(--footer-color) !important;
+}
 .services-text li {
     text-align: left;
     font-size: clamp(20px, 3vw, 30px);
     color: #888;
     margin-bottom: 10px;
 }
+
 
 /* Image Styling */
 .services-image {

@@ -48,9 +48,7 @@ const Featured = () => {
       </div>
 
       <p className="featured-description">
-        <em>
-          Becca Cooke’s stunning nails, designed for the prestigious PFA Awards
-        </em>
+        Becca Cooke’s stunning nails, designed for the prestigious PFA Awards
       </p>
 
       <button className="featured-button" onClick={() => nav("/gallery")}>
