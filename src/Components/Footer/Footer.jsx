@@ -1,12 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Footer.css";
-import {
-  FaEnvelope,
-  FaPhone,
-  FaInstagram,
-  FaSnapchatGhost,
-  FaTiktok,
-} from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   const footerRef = useRef(null);
@@ -50,55 +44,95 @@ const Footer = () => {
             <FaPhone className="footer-icon" />
             <p>01274 576 908</p>
           </div>
+
+          <div className="social-icons">
+            <FaInstagram
+              className="social-icon"
+              onClick={() =>
+                window.open("https://www.instagram.com/zhr.nails_", "_blank")
+              }
+            />
+            <FaTiktok
+              className="social-icon"
+              onClick={() =>
+                window.open("https://www.tiktok.com/@zhr.nails_", "_blank")
+              }
+            />
+          </div>
+          <div>
+            <p>2025 © ZHR Nails All Rights Reserved</p>
+            <p>
+              Powered by{" "}
+              <a
+                target="_blank"
+                href="https://litwebs.co.uk"
+                style={{
+                  textDecoration: "underline",
+                  cursor: "pointer",
+                  color: "#fff",
+                }}
+              >
+                Lit Webs
+              </a>
+            </p>
+          </div>
         </div>
 
         <div className="footer-right">
-          <h3>The Colour Studio Manchester</h3>
-          <p>
-            <a
-              href="https://maps.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
+          <form
+            style={{
+              boxShadow: "none",
+              backgroundColor: "#f5f5f5",
+            }}
+            action="https://formsubmit.co/ZHR.nails@hotmail.com"
+            method="POST"
+            className={`contact-form ${
+              isVisible ? "animate-in" : "animate-out"
+            }`}
+          >
+            <div className="input-group">
+              <input
+                type="text"
+                name="first_name"
+                placeholder="First Name"
+                required
+              />
+              <input
+                type="text"
+                name="last_name"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              required
+            />
+            <textarea
+              style={{ minHeight: "200px" }}
+              name="message"
+              placeholder="Type your message here..."
+              required
+            ></textarea>
+            <button
+              type="submit"
+              className="submit-btn "
+              style={{
+                boxShadow: "none",
+                color: "#999",
+                backgroundColor: "#fff",
+                border: "1px solid #baa368",
+              }}
             >
-              23, Bury Old Road <br />
-              Manchester <br />
-              M25 0EY
-            </a>
-          </p>
+              Submit
+            </button>
+          </form>
         </div>
       </div>
 
-      <div className="footer-bottom">
-        <p>2025 © ZHR Nails All Rights Reserved</p>
-        <div className="social-icons">
-          <FaInstagram
-            className="social-icon"
-            onClick={() =>
-              window.open("https://www.instagram.com/zhr.nails_", "_blank")
-            }
-          />
-          <FaTiktok
-            className="social-icon"
-            onClick={() =>
-              window.open("https://www.tiktok.com/@zhr.nails_", "_blank")
-            }
-          />
-        </div>
-        <p>
-          Powered by{" "}
-          <a
-            target="_blank"
-            href="https://litwebs.co.uk"
-            style={{
-              textDecoration: "underline",
-              cursor: "pointer",
-              color: "#fff",
-            }}
-          >
-            Lit Webs
-          </a>
-        </p>
-      </div>
+      <div className="footer-bottom"></div>
     </footer>
   );
 };

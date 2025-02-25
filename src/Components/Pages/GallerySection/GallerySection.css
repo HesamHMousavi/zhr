@@ -1,31 +1,27 @@
 .gallery-section {
     text-align: center;
     padding: 4rem 2rem;
-    position: relative;
-    background-color: var(--sagegreen);
+    background-color: #d4d6c8;
+    margin-top: 17rem;
+    margin-bottom: 10rem;
 }
 
-.gallery-title {
-    font-size: 48px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 15rem;
-    color: #4d4036;
-    margin-bottom: 7.5rem;
-}
-
-/* Grid Layout for Masonry Effect */
+/* Grid Layout */
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 15px;
     max-width: 1400px;
     margin: 0 auto;
 }
-
+.gallery-title{
+    color: #3f2e2d;
+    font-size: 3rem;
+    margin-top: -10rem !important;
+    margin-bottom: 10rem !important;
+}
 /* Image Frames */
 .gallery-item {
-    border: 35px solid rgb(68, 16, 16);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,30 +31,9 @@
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Different Image Sizes */
-.gallery-item.extra-large {
-    grid-column: span 4;
-    grid-row: span 4;
-}
-
-.gallery-item.large {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.gallery-item.small {
-    grid-column: span 3;
-    grid-row: span 3;
-}
-
-.gallery-item.tiny {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-/* Decorative Frame Effect */
 .frame {
-    padding: 5px;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,9 +42,8 @@
 /* Inner Image */
 .frame img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    max-width: 100%;
 }
 
 /* Animations */
@@ -94,82 +68,29 @@
 .delay-7 { transition-delay: 0.8s; }
 .delay-8 { transition-delay: 0.9s; }
 .delay-9 { transition-delay: 1.0s; }
-.delay-10 { transition-delay: 1.1s; }
-.delay-11 { transition-delay: 1.2s; }
-.delay-12 { transition-delay: 1.3s; }
-.delay-13 { transition-delay: 1.4s; }
-.delay-14 { transition-delay: 1.5s; }
-.delay-15 { transition-delay: 1.6s; }
-.delay-16 { transition-delay: 1.7s; }
-.delay-17 { transition-delay: 1.8s; }
-.delay-18 { transition-delay: 1.9s; }
-.delay-19 { transition-delay: 2.0s; }
 
 /* Responsive Styles */
 
-/* Tablet Layout */
+/* Tablet */
 @media (max-width: 1024px) {
     .gallery-container {
         grid-template-columns: repeat(4, 1fr);
     }
-
-    .gallery-item {
-        border: 20px solid rgb(68, 16, 16);
-    }
-
-    .gallery-item.extra-large {
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-
-    .gallery-item.large,
-    .gallery-item.small,
-    .gallery-item.tiny {
-        grid-column: span 2;
-        grid-row: span 2;
-    }
 }
 
-/* Mobile Layout */
+/* Mobile */
 @media (max-width: 768px) {
     .gallery-container {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .gallery-item {
-        border: 20px solid rgb(68, 16, 16);
-    }
-    .gallery-section{
+    .gallery-section {
         padding: 2rem 1rem;
-    }
-
-    .gallery-item.extra-large,
-    .gallery-item.large,
-    .gallery-item.small,
-    .gallery-item.tiny {
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-    .frame {
-        padding: 0;
     }
 }
 
-/* Mobile Phones - Single Column */
+/* Small Mobile */
 @media (max-width: 480px) {
     .gallery-container {
         grid-template-columns: 1fr;
-    }
-
-    .gallery-item {
-        border: 15px solid rgb(68, 16, 16);
-    }
-
-    .gallery-item.extra-large,
-    .gallery-item.large,
-    .gallery-item.small,
-    .gallery-item.tiny {
-        grid-column: span 1;
-        grid-row: span 1;
     }
 }

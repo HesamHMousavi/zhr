@@ -9,14 +9,17 @@
 }
 
 select {
+  
   -webkit-transform: translateZ(0); 
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   border-radius: 0; 
   color: #333 !important;
+  border-radius: 5px ;
 }
 option{
+  border-radius: 5px ;
   color: #333 !important;
 }
 
@@ -42,7 +45,7 @@ body {
   margin-top: 15px;
   padding: 15px 25px;
   border: none;
-  background-color: var(--dark-orange);
+  background-color: #baa368;
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -52,5 +55,11 @@ body {
   border-radius: 0 !important;
 }
 .orange-btn:hover {
-  background-color: #8c3905; /* Darker shade */
+  background-color: #a38b50;
 }
+
+
+.gallery-title{
+  margin: 0 auto;
+}
+

@@ -11,8 +11,6 @@
     background: transparent;
     transition: all 0.3s ease-in-out;
     z-index: 1000;
-
-
   }
 .same{
   /* flex: 1; */
@@ -20,6 +18,16 @@
   justify-content: center;
   /* text-align: center; */
 }
+
+.rugged {
+  color: white !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), 
+              url('../../Images/rug.jpeg'); /* Adjust the path as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
   
   /* Shadow Effect */
   .header::after {
@@ -39,7 +47,7 @@
   }
   
   .header.scrolled  *{
-    color: #333 !important;
+    /* color: #333 !important; */
   }
   .header.scrolled {
     background-color: #fff;
@@ -67,7 +75,7 @@
   
   .nav a {
     font-family: "Roboto", serif;
-    font-weight: 300;
+    font-weight: 400;
     min-width: 150px;
     text-align: center;
     color: #333;
@@ -83,10 +91,7 @@
   
   .nav a:hover {
     background-color: #f7f5f5;
-    color: var(--dark-orange) !important;
-    /* background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(2px); 
-    -webkit-backdrop-filter: blur(2px); */
+    color: #baa368 !important;
   }
   
   /* Responsive Navigation */

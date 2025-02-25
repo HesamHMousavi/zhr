@@ -1,22 +1,24 @@
+/* Container styles */
 .image-preview {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 700px;
+    height: 70vh;
     overflow: hidden;
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* When the component enters the viewport */
+/* Visible state */
 .image-preview.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* Image styles */
 .image-preview img {
     width: 100%;
     height: 100%;
@@ -32,25 +34,70 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
 }
 
-/* Centering Overlay Text */
+/* Overlay Text */
 .image-preview .overlay-text {
     position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -60%); /* Centers the text */
+    bottom: 2rem;
+    left: 1rem;
     color: white;
-    font-size: 50px;
-    text-align: center;
     z-index: 1;
     opacity: 0;
+    transform: translateY(20px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* Make the text visible when the component enters the viewport */
+/* Heading styles with responsive adjustments */
+.image-preview .overlay-text h1 {
+    font-weight: 200;
+    font-size: 20rem;
+    margin-bottom: -3.75rem;
+    line-height: 1;
+}
+
+/* Make overlay text visible */
 .image-preview.visible .overlay-text {
     opacity: 1;
-    transform: translate(-50%, -50%) translateY(0);
+    transform: translateY(0);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .image-preview {
+        height: 50vh;
+    }
+
+    .image-preview .overlay-text {
+        bottom: 1rem;
+        left: 0.5rem;
+    }
+
+    .image-preview .overlay-text h1 {
+        font-weight: 200;
+        font-size: 15rem;
+        margin-bottom: -2.3rem;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-preview {
+        height: 40vh;
+    }
+
+    .image-preview .overlay-text {
+        bottom: 0.5rem;
+        left: 0.5rem;
+    }
+
+    .image-preview .overlay-text h1 {
+        width: 100%;
+        text-align: center;
+        font-weight: 200;
+        font-size: 10rem;
+        margin-bottom: -1.40rem;
+        line-height: 1;
+    }
 }

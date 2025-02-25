@@ -8,8 +8,8 @@
 .faq-title {
     font-size: clamp(28px, 4vw, 40px); /* Responsive title */
     font-weight: bold;
-    color: #4d4036;
-    border-bottom: 3px solid #b45309;
+    color: #3f2e2d;
+    border-bottom: 3px solid #baa368;
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 2rem;

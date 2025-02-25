@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Featured.css";
-import img1 from "../../../Images/IMG10.jpg";
-import img2 from "../../../Images/IMG11.jpg";
-import img3 from "../../../Images/IMG12.jpg";
+import img1 from "../../../Images/IMG25.jpeg";
+import img2 from "../../../Images/IMG1.jpg";
+import img3 from "../../../Images/IMG29.jpeg";
 import { useNavigate } from "react-router-dom";
 
 const Featured = () => {
@@ -33,27 +33,47 @@ const Featured = () => {
     <div ref={sectionRef} className="featured-container" id="featured">
       <h2 className="featured-title">Featured work</h2>
       <div className="featured-gallery">
-        {[img1, img2, img3].map((img, index) => (
-          <div
-            key={index}
-            className={`featured-item ${
-              isVisible ? `fade-in delay-${index}-1` : "fade-out"
-            }`}
-          >
-            <div className="featured-frame">
-              <img src={img} alt={`Nail Design ${index + 1}`} />
-            </div>
+        <div
+          className={`featured-item ${
+            isVisible ? `fade-in delay-0-1` : "fade-out"
+          }`}
+        >
+          <div className="featured-frame">
+            <img src={img1} alt={`Nail Design`} />
           </div>
-        ))}
+          <p className="featured-description">
+            Nail art featured in 'Come As You Really Are' exhibition
+          </p>
+        </div>
+        <div
+          className={`featured-item ${
+            isVisible ? `fade-in delay-1-1` : "fade-out"
+          }`}
+        >
+          <div className="featured-frame">
+            <img src={img2} alt={`Nail Design`} />
+          </div>
+          <p className="featured-description">
+            Becca Cooke's nails, designed for the prestigious PFA awards
+          </p>
+        </div>
+        <div
+          className={`featured-item ${
+            isVisible ? `fade-in delay-2-1` : "fade-out"
+          }`}
+        >
+          <div className="featured-frame">
+            <img src={img3} alt={`Nail Design`} />
+          </div>
+          <p className="featured-description">
+            Featured on BBC News, celebrating creativity in nail art
+          </p>
+        </div>
       </div>
 
-      <p className="featured-description">
-        Becca Cooke’s stunning nails, designed for the prestigious PFA Awards
-      </p>
-
-      <button className="featured-button" onClick={() => nav("/gallery")}>
+      {/* <button className="featured-button" onClick={() => nav("/gallery")}>
         Gallery
-      </button>
+      </button> */}
     </div>
   );
 };

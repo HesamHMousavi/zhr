@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import IMG from "../../../Images/IMG24.jpeg";
+import IMG from "../../../Images/rug.jpeg";
 import "./ImagePreview.css";
 
 const ImagePreview = () => {
@@ -31,7 +31,9 @@ const ImagePreview = () => {
   return (
     <div className="image-preview" ref={previewRef}>
       <img src={IMG} alt="Preview" className="preview-image" />
-      <div className="overlay-text">Introducing ZHR</div>
+      <div className="overlay-text">
+        <h1>ZHR</h1>
+      </div>
     </div>
   );
 };

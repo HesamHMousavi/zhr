@@ -26,7 +26,9 @@ const Steps = () => {
 
   return (
     <div ref={sectionRef} className="steps-section">
-      <div className="overlay"></div> 
+      <div className="overlay">
+        <h1 className="get-in">GET IN TOUCH</h1>
+      </div>
       <div className="steps-container"></div>
     </div>
   );

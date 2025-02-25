@@ -11,8 +11,8 @@ const Contact = () => {
   return (
     <div>
       <Header />
-      <Hero />
-      <Services />
+      {/* <Hero /> */}
+      {/* <Services /> */}
       <Steps />
       <ContactForm />
       <FAQSection />

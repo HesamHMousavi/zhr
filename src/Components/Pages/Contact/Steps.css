@@ -1,25 +1,36 @@
 .steps-section {
+    margin-top: 10rem;
     background: url('../../../Images/rug.jpeg') no-repeat center center;
     background-size: cover; /* Ensures full coverage */
-    border: 30px solid #fff;
+    /* border: 30px solid #fff; */
     position: relative;
-    min-height: 20px; /* Adjusted for better responsiveness */
+    min-height: 20px; 
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    overflow: hidden; /* Prevents potential overflow issues */
+    overflow: hidden;
 }
 
-/* Dark Overlay */
 .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay */
     z-index: 1;
+}
+
+.get-in{
+    font-weight: 100;
+    font-size: 5rem;
+    color: #fff;
+    width: 100%;
+    text-align: center;
 }
 
 /* Step container */
@@ -28,6 +39,7 @@
     flex-direction: column;
     align-items: center;
     gap: 80px;
+    height: 400px;
     width: 100%;
     max-width: 1200px;
     padding: 3rem;

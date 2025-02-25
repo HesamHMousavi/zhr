@@ -31,9 +31,12 @@ const BookConsultation = () => {
 
   return (
     <div ref={sectionRef} className="consultation-container">
-      <h2 className="consultation-title">Ready to transform your nails?</h2>
+      <h2 className="consultation-title">
+        Explore the Artistry of Nail Design
+      </h2>
       <p className="consultation-subtitle">
-        Book a consultation to discuss your nail care needs
+        Browse the Collection and discover intricate designs that blend
+        precision, creativity, and craftsmanship.
       </p>
 
       <div className="image-gallery">

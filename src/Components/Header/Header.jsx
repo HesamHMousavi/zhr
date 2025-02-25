@@ -40,21 +40,31 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`header ${scrolled ? "scrolled" : ""}`}>
-      {/* Hamburger Menu Button */}
-
+    <header className={`header ${scrolled ? "scrolled rugged" : ""}`}>
       {/* Navigation - Main */}
       <nav className={`nav same`}>
         <Link
           to="/"
-          className={` ${path.pathname === "/" ? "black-color" : ""} `}
+          className={` ${
+            path.pathname === "/"
+              ? "black-color"
+              : scrolled
+              ? "black-color"
+              : ""
+          } `}
           onClick={() => setMenuOpen(false)}
         >
           Home
         </Link>
         <Link
           to="/gallery"
-          className={` ${path.pathname === "/" ? "black-color" : ""} `}
+          className={` ${
+            path.pathname === "/"
+              ? "black-color"
+              : scrolled
+              ? "black-color"
+              : ""
+          } `}
           onClick={() => setMenuOpen(false)}
         >
           Gallery
@@ -67,21 +77,33 @@ const Header = () => {
       />
       <CiMenuFries
         className={`menu-toggle`}
-        color="var(--dark-orange)"
+        color="#baa368"
         size={35}
         onClick={() => setMenuOpen(!menuOpen)}
       />
       <nav className={`nav same`}>
         <Link
           to="/press-ons"
-          className={` ${path.pathname === "/" ? "black-color" : ""} `}
+          className={` ${
+            path.pathname === "/"
+              ? "black-color"
+              : scrolled
+              ? "black-color"
+              : ""
+          } `}
           onClick={() => setMenuOpen(false)}
         >
           Custom Press-Ons
         </Link>
         <Link
           to="/contact"
-          className={` ${path.pathname === "/" ? "black-color" : ""} `}
+          className={` ${
+            path.pathname === "/"
+              ? "black-color"
+              : scrolled
+              ? "black-color"
+              : ""
+          } `}
           onClick={() => setMenuOpen(false)}
         >
           Contact
@@ -91,28 +113,52 @@ const Header = () => {
       <nav className={`nav ${menuOpen ? "open" : "dis-none"} `}>
         <Link
           to="/"
-          className={` ${path.pathname === "/" ? "black-color" : ""} `}
+          className={` ${
+            path.pathname === "/"
+              ? "black-color"
+              : scrolled
+              ? "black-color"
+              : ""
+          } `}
           onClick={() => setMenuOpen(false)}
         >
           Home
         </Link>
         <Link
           to="/gallery"
-          className={` ${path.pathname === "/" ? "black-color" : ""} `}
+          className={` ${
+            path.pathname === "/"
+              ? "black-color"
+              : scrolled
+              ? "black-color"
+              : ""
+          } `}
           onClick={() => setMenuOpen(false)}
         >
           Gallery
         </Link>
         <Link
           to="/press-ons"
-          className={` ${path.pathname === "/" ? "black-color" : ""} `}
+          className={` ${
+            path.pathname === "/"
+              ? "black-color"
+              : scrolled
+              ? "black-color"
+              : ""
+          } `}
           onClick={() => setMenuOpen(false)}
         >
           Custom Press-Ons
         </Link>
         <Link
           to="/contact"
-          className={` ${path.pathname === "/" ? "black-color" : ""} `}
+          className={` ${
+            path.pathname === "/"
+              ? "black-color"
+              : scrolled
+              ? "black-color"
+              : ""
+          } `}
           onClick={() => setMenuOpen(false)}
         >
           Contact

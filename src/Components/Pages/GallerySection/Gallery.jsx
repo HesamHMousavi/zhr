@@ -7,7 +7,6 @@ const Gallery = () => {
   return (
     <div>
       <Header />
-      <h2 className="gallery-title">GALLERY</h2>
       <GallerySection />
       <Footer />
     </div>

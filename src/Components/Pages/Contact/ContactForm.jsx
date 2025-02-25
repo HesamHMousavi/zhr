@@ -36,14 +36,12 @@ const ContactForm = () => {
         method="POST"
         className={`contact-form ${isVisible ? "animate-in" : "animate-out"}`}
       >
-        {/* Spam Prevention & Redirect */}
-        {/* <input type="hidden" name="_captcha" value="false" />
-        <input
-          type="hidden"
-          name="_next"
-          value="https://yourwebsite.com/thank-you"
-        /> */}
-
+        <input type="hidden" name="_next" value="https://zhrnails.com/" />
+        <p className="contact-top">
+          Whether you have a question or are interested in ordering custom
+          press-on nails, I'm here to help. Fill out the form below to get in
+          touch.
+        </p>
         <div className="input-group">
           <input
             type="text"

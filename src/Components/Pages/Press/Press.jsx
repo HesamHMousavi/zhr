@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Press.css";
-import img3 from "../../../Images/IMG16.jpg";
+import img3 from "../../../Images/IMG28.jpeg";
 import img from "../../../Images/rug.jpeg";
-import { useNavigate } from "react-router-dom";
 
 const Press = () => {
   const [loc, setLoc] = useState("UK");
   const sectionRef = useRef(null);
+  const formRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -28,28 +28,38 @@ const Press = () => {
     };
   }, []);
 
-  const images = [img3];
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div ref={sectionRef} className="press-section">
-      <h2 className={`press-title ${isVisible ? "animate-in" : "animate-out"}`}>
-        CUSTOM PRESS ON NAILS
-      </h2>
-
       <div className="press-gallery">
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className={`press-item ${
-              isVisible ? `animate-in delay-${index}` : "animate-out"
+        <div
+          className={`press-item ${isVisible ? "animate-in" : "animate-out"}`}
+        >
+          <h2
+            className={`press-title ${
+              isVisible ? "animate-in" : "animate-out"
             }`}
           >
-            <img src={img} alt={`Press-On Nails ${index}`} />
-          </div>
-        ))}
+            'Desi' Inspired Press-ons
+          </h2>
+          <img src={img3} alt="Press-On Nails" />
+          <p className="des">
+            Custom Press-On Nails: Featuring Our Signature Design. This set,
+            influenced by traditional Desi art, is available for custom orders.
+            Interested in a one-of-a-kind design?
+          </p>
+          <button className="submit-btn" onClick={scrollToForm}>
+            Enquire now
+          </button>
+        </div>
         <img src={img} alt="" className="rug" />
       </div>
-      <div className="contact-section">
+
+      {/* Contact Form Section */}
+      <div className="contact-section" ref={formRef}>
         <h2
           className={`contact-title ${
             isVisible ? "animate-in" : "animate-out"
@@ -61,15 +71,8 @@ const Press = () => {
           action="https://formsubmit.co/ZHR.nails@hotmail.com"
           method="POST"
           className={`contact-form ${isVisible ? "animate-in" : "animate-out"}`}
+          id="local-form"
         >
-          {/* Spam Prevention & Redirect */}
-          {/* <input type="hidden" name="_captcha" value="false" />
-        <input
-          type="hidden"
-          name="_next"
-          value="https://yourwebsite.com/thank-you"
-        /> */}
-
           <div className="input-group">
             <input
               type="text"

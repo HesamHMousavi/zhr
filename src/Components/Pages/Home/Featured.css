@@ -1,6 +1,6 @@
 .featured-container {
     margin-top: 5rem;
-    background-color: var(--light-orange);
+    background-color: #d4d6c8;
     text-align: center;
     padding: 4rem 2rem;
 }
@@ -19,7 +19,7 @@
 /* ✅ Grid layout auto-adjusts based on screen size */
 .featured-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     margin-bottom: 2rem;
     justify-content: center;
@@ -50,6 +50,7 @@
     position: relative;
     width: 100%;
     height: 100%;
+    /* min-height: 550px; */
     overflow: hidden;
     aspect-ratio: 4 / 3;
 }
@@ -58,10 +59,11 @@
 .featured-frame img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ensures the entire image is visible without cropping */
     display: block;
     transition: transform 0.4s ease-in-out;
 }
+
 
 /* Zoom effect on hover */
 .featured-frame:hover img {
@@ -70,17 +72,20 @@
 
 /* Description Text */
 .featured-description {
+    margin-top: 1.5rem;
     font-family: "Roboto", serif;
     font-size: 1.2rem;
-    color: white;
-    margin-bottom: 2rem;
+    font-size: 16px;
+    color: #999;
+
+    /* margin-bottom: 2rem; */
 }
 
 /* Button */
 .featured-button {
     padding: 12px 24px;
     border: none;
-    background-color: #b45309;
+    background-color: #baa368;
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -89,7 +94,7 @@
 }
 
 .featured-button:hover {
-    background-color: #8c3905;
+    background-color: #a38b50;
 }
 
 /* ✅ Responsive Fixes */
@@ -128,7 +133,8 @@
         aspect-ratio: 16 / 9;
     }
     .featured-description {
-        font-size: 1rem;
+        font-size: 13px;
+        margin-bottom: 2rem;
     }
 }
 
@@ -142,9 +148,7 @@
     .featured-frame {
         aspect-ratio: 16 / 10;
     }
-    .featured-description {
-        font-size: 0.9rem;
-    }
+
     .featured-button {
         font-size: 0.9rem;
         padding: 10px 20px;
