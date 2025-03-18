@@ -42,7 +42,7 @@ const Footer = () => {
 
           <div className="footer-item">
             <FaPhone className="footer-icon" />
-            <p>01274 576 908</p>
+            <p>+44 7599 872050</p>
           </div>
 
           <div className="social-icons">
