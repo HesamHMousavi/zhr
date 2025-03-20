@@ -56,9 +56,9 @@ const BookConsultation = () => {
         className={`orange-btn ${
           isVisible ? "animate-in delay-3" : "animate-out"
         }`}
-        onClick={() => nav("/contact")}
+        onClick={() => nav("/gallery")}
       >
-        Book Now
+        Gallery
       </button>
     </div>
   );

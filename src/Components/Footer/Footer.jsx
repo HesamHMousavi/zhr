@@ -84,7 +84,8 @@ const Footer = () => {
               boxShadow: "none",
               backgroundColor: "#f5f5f5",
             }}
-            action="https://formsubmit.co/ZHR.nails@hotmail.com"
+            // action="https://formsubmit.co/ZHR.nails@hotmail.com"
+            action="https://usebasin.com/f/8a72e7850b52"
             method="POST"
             className={`contact-form ${
               isVisible ? "animate-in" : "animate-out"

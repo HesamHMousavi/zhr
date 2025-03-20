@@ -68,7 +68,8 @@ const Press = () => {
           Press-ons Contact Form
         </h2>
         <form
-          action="https://formsubmit.co/ZHR.nails@hotmail.com"
+          // action="https://formsubmit.co/ZHR.nails@hotmail.com"
+          action="https://usebasin.com/f/8a72e7850b52"
           method="POST"
           className={`contact-form ${isVisible ? "animate-in" : "animate-out"}`}
           id="local-form"
